@@ -2,11 +2,11 @@
   display: block;
 }
 header {
-  // position: fixed;
+  position: fixed;
   width: calc(100% - 4px);
   height: fit-content;
-  // top: 0;
-  // left: 0;
+  top: 0;
+  left: 0;
   border-radius: 10px;
   margin: 2px 2px 0 2px;
   background-color: #22ac54;
@@ -21,12 +21,13 @@ header {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  z-index: 2;
 }
 button {
-  border: 1px solid white;
+  border: 2px solid white;
   padding: 5px 10px;
   background-color: #22ac54;
-  border-radius: 5px;
+  border-radius: 20px;
   color: white;
   margin-left: 20px;
   cursor: pointer;
@@ -34,6 +35,9 @@ button {
   &:hover {
     opacity: 1;
   }
+}
+.gaussian-btn {
+  background-color: orange;
 }
 .attachment-btn {
   background-color: #2224ac;
@@ -50,7 +54,7 @@ main {
 }
 .image-canvas {
   margin: 10px 0;
-  height: 80vh;
+  height: 75vh;
   width: auto;
 }
 

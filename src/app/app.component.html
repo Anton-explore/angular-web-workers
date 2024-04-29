@@ -1,11 +1,10 @@
 <header>
-  <h1>{{ title }}</h1>
-  <p>Congratulations! Your app is running. 🎉</p>
-  <!-- <button (click)="applyFilter()">Apply Filter</button> -->
+  <h2>{{ title }}</h2>
 </header>
 <main>
   <div class="buttons-wrapper">
-    <button (click)="applyFilter()">Apply Filter</button>
+    <button class="gaussian-btn" (click)="applyEffect('gauss')">Apply gaussian blur</button>
+    <button (click)="applyEffect('filter')">Apply Filter</button>
     <input
       type="file"
       accept=".jpeg,.jpg,.png,.heif,.heic"
