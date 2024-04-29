@@ -2,11 +2,11 @@
   display: block;
 }
 header {
-  position: fixed;
+  // position: fixed;
   width: calc(100% - 4px);
   height: fit-content;
-  top: 0;
-  left: 0;
+  // top: 0;
+  // left: 0;
   border-radius: 10px;
   margin: 2px 2px 0 2px;
   background-color: #22ac54;
@@ -15,6 +15,28 @@ header {
   justify-content: center;
   align-items: center;
   color: white;
+}
+.buttons-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+button {
+  border: 1px solid white;
+  padding: 5px 10px;
+  background-color: #22ac54;
+  border-radius: 5px;
+  color: white;
+  margin-left: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+}
+.attachment-btn {
+  background-color: #2224ac;
 }
 
 main {
@@ -26,6 +48,12 @@ main {
   align-items: center;
   flex-direction: column;
 }
+.image-canvas {
+  margin: 10px 0;
+  height: 80vh;
+  width: auto;
+}
+
 footer {
   position: fixed;
   width: calc(100% - 4px);

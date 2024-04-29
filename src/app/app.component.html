@@ -4,9 +4,20 @@
   <!-- <button (click)="applyFilter()">Apply Filter</button> -->
 </header>
 <main>
-  <input type="file" (change)="loadImage($event)" value="Select File" />
+  <div class="buttons-wrapper">
+    <button (click)="applyFilter()">Apply Filter</button>
+    <input
+      type="file"
+      accept=".jpeg,.jpg,.png,.heif,.heic"
+      #fileInput
+      (change)="onLoadImage($event)"
+      value="Select File"
+      hidden
+    />
+    <button class="attachment-btn" (click)="triggerInput()">Load image</button>
+  </div>
 
-  <canvas #imagePreview></canvas>
+  <canvas #imagePreview class="image-canvas"></canvas>
 </main>
 <footer><span>&copy;</span> 2024</footer>
 
