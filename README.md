@@ -1,4 +1,7 @@
-# AngularWebWorkers
+# Angular Web Workers
+
+This project was created for testing the web worker functionality in Angular application.
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
 
