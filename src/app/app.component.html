@@ -5,6 +5,9 @@
   <div class="buttons-wrapper">
     <button class="gaussian-btn" (click)="applyEffect('gauss')">Apply gaussian blur</button>
     <button (click)="applyEffect('filter')">Apply Filter</button>
+  </div>
+
+  <div class="select-wrapper">
     <input
       type="file"
       accept=".jpeg,.jpg,.png,.heif,.heic"
@@ -13,10 +16,17 @@
       value="Select File"
       hidden
     />
-    <button class="attachment-btn" (click)="triggerInput()">Load image</button>
+    @if(image) {
+      <button class="attachment-btn" (click)="clearImage()">Delete image</button>
+    } @else {
+      <button class="attachment-btn" (click)="triggerInput()">Select your image</button>
+    }
+    <div class="dropzone" appDragAndDrop (filesDroppedEmitter)="onLoadFile($event)" [ngClass]="{'hidden': image !== null}">
+      <span>or Drop your image here</span>
+    </div>
   </div>
 
-  <canvas #imagePreview class="image-canvas"></canvas>
+  <canvas #imagePreview class="image-canvas" [ngClass]="{'canvas-on': image !== null}"></canvas>
 </main>
 <footer><span>&copy;</span> 2024</footer>
 

@@ -17,6 +17,7 @@ header {
   color: white;
 }
 .buttons-wrapper {
+  margin-top: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,7 +30,6 @@ button {
   background-color: #22ac54;
   border-radius: 20px;
   color: white;
-  margin-left: 20px;
   cursor: pointer;
   opacity: 0.8;
   &:hover {
@@ -48,14 +48,34 @@ main {
   min-height: 100vh;
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+.select-wrapper {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dropzone {
+  width: 200px;
+  height: 50px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .image-canvas {
   margin: 10px 0;
-  height: 75vh;
   width: auto;
+  height: auto;
+}
+.canvas-on {
+  height: 60vh;
+}
+.hidden {
+  display: none;
 }
 
 footer {
